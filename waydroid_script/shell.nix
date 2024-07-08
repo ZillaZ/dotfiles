@@ -1,4 +1,6 @@
 { pkgs ? import <nixpkgs> {} }:
+# Don't forget to change the ref inside the waydroid_script stuff/general.py
+# change the "the line that has the os.path.dirname(__file__), .., bin with the generated resetprop path from this script"
 let
   src = builtins.fetchGit {
     url = "https://github.com/casualsnek/waydroid_script";
