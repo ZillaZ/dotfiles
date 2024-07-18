@@ -1,6 +1,5 @@
 { config, lib, pkgs, ... }:
 let mod = "Mod4";
-
 in {
   home.username = "lucas";
   home.homeDirectory = "/home/lucas";
@@ -18,7 +17,16 @@ in {
     wget
     libgccjit
     libgcc
-    rust-analyzer
+    pavucontrol
+    weston
+    vulkan-tools
+    clinfo
+    nvtopPackages.amd
+    glxinfo
+    python3
+    yazi
+    unzip
+    docker-compose
   ];
 
   programs = {

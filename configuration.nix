@@ -47,7 +47,6 @@
   };
 
   swapDevices = [ ];
-
   networking.hostName = "lucas"; # Define your hostname.
   networking.hostId = "2c8661f9";
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -81,7 +80,7 @@
         dmenu
         i3status
         i3lock
-	      i3blocks
+	i3blocks
       ];
     };
   };
@@ -136,6 +135,12 @@
       rev = "bfc8f6edcb7bcf3cf24e4a7199b3f6fed96aaecf"; # change the revision
     }))
   ];
+
+  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
